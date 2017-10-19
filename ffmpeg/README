@@ -1,0 +1,14 @@
+this was tested on Ubuntu 16.04.
+
+to create a stream from the webcam:
+
+	./run
+
+to watch the stream:
+	1. Open VLC player
+	2. In the menu bar select "Media"
+	3. Inside "Media" select "Open Network Stream..."
+	4. in the Network tab enter this URL:
+		udp://@:2000
+	5. Click the "Play" botton in the bottom
+
