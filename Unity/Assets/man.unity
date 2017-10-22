@@ -272,6 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeatRateSec: 10
   objectsTag: animal
+  camLeft: {fileID: 348896752}
+  camRight: {fileID: 1245860696}
 --- !u!4 &272490692
 Transform:
   m_ObjectHideFlags: 0
@@ -299,7 +301,7 @@ GameObject:
   - component: {fileID: 348896749}
   m_Layer: 0
   m_Name: Camera left
-  m_TagString: Untagged
+  m_TagString: mirrorcam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,7 +960,7 @@ GameObject:
   - component: {fileID: 1245860693}
   m_Layer: 0
   m_Name: Camera right
-  m_TagString: Untagged
+  m_TagString: mirrorcam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1065,6 +1067,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeatRateSec: 0
   objectsTag: 
+  camLeft: {fileID: 0}
+  camRight: {fileID: 0}
 --- !u!1 &1297415392 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a85d92b72304a79449904f3b49e3d5ea, type: 3}

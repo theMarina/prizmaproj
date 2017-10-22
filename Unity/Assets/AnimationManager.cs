@@ -5,20 +5,26 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour {
 	public float repeatRateSec;
 	public string objectsTag;
+    public Camera camLeft;
+    public Camera camRight;
 
-	GameObject[] myArr;
-	int myIter=0;
+    GameObject[] myArr;
+    int myIter=0;
 
 	// Use this for initialization
 	void Start () {
-		myArr = GameObject.FindGameObjectsWithTag (objectsTag);
+        myArr = GameObject.FindGameObjectsWithTag(objectsTag);
 
-		//hide all objects
-		foreach (GameObject o in myArr){
+        //hide all objects
+        foreach (GameObject o in myArr){
 			o.SetActive (false);
 		}
 
-		myArr [myIter].SetActive (true);
+        // flip cameras
+        camLeft.projectionMatrix = camLeft.projectionMatrix * Matrix4x4.Scale(new Vector3(1, -1, 1));
+        camRight.projectionMatrix = camRight.projectionMatrix * Matrix4x4.Scale(new Vector3(1, -1, 1));
+
+        myArr [myIter].SetActive (true);
 		InvokeRepeating("showNextAnim",repeatRateSec,repeatRateSec);
 	}
 
