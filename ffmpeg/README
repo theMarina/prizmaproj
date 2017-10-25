@@ -1,3 +1,4 @@
+=== Linux ===
 this was tested on Ubuntu 16.04.
 
 to create a stream from the webcam:
@@ -12,3 +13,7 @@ to watch the stream:
 		udp://@:2000
 	5. Click the "Play" botton in the bottom
 
+=== Windows ===
+1. install ffmpeg
+2. run stream.bat
+3. run play.bat
